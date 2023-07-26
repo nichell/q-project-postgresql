@@ -1,4 +1,4 @@
-package com.example;
+package titanic;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.context.Dependent;

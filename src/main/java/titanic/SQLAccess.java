@@ -1,4 +1,4 @@
-package com.example;
+package titanic;
 
 import io.agroal.api.AgroalDataSource;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -10,7 +10,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Callable;
 
 @ApplicationScoped
 public class SQLAccess {

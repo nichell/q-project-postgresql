@@ -1,5 +1,6 @@
-package com.example;
+package titanic;
 
+import io.quarkus.test.common.QuarkusTestResource;
 import io.quarkus.test.junit.QuarkusTest;
 import jakarta.inject.Inject;
 import org.junit.jupiter.api.Assertions;
@@ -9,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import java.sql.SQLException;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+@QuarkusTestResource(CustomResource.class)
 @QuarkusTest
 class SQLAccessTest {
     @Inject
@@ -32,7 +33,7 @@ class SQLAccessTest {
     void getPassenger() throws SQLException {
         List<String> passenger = access.getPassenger(1, true);
         Assertions.assertEquals(passenger.size(), 8);
-        Assertions.assertTrue(passenger.contains("Brady, Mr. John Bertram"));
+        Assertions.assertTrue(passenger.contains("Jones, Mr. Charles Cresson"));
     }
 
     @Test
